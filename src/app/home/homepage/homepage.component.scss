@@ -1,0 +1,33 @@
+.form-row.homepage {
+    align-items: center;
+}
+
+.col-md-6 {
+    padding: 8%;
+}
+
+.title, .subtitle, .row {
+    margin: 1rem;
+}
+
+.login-enter {
+    background-color: transparent;
+    width: 50%; 
+    color: white;
+}
+
+.login-form nb-select {
+    padding: 0 1rem;
+}
+
+.col-md-6.aa{
+    text-align: center;
+}
+
+@media (max-width: 768px){
+    .form-row.homepage {
+        display: flex;
+        flex-direction: column-reverse;
+        // text-align: center;
+    }
+}

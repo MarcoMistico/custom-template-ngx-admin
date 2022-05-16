@@ -1,0 +1,40 @@
+<nb-card>
+    <nb-card-header>
+        <div class="form-row">
+            <div class="form-group col-md-10 m-a">
+                <h4 class="text-white" style="display: inline;">Attenzione</h4>
+            </div>
+            <div class="form-group col-md-2 m-a" style="text-align: right;">
+                <button nbButton class="text-white" ghost status="danger" (click)="close(false)">
+                    <nb-icon icon="close-outline"></nb-icon>
+                </button>
+            </div>
+        </div>
+    </nb-card-header>
+    <nb-card-body>
+        <div *ngIf="message !== ''" class="message-container">
+            <p>{{message}}</p>
+        </div>
+        <div *ngIf="message === ''" class="message-container">
+            <!-- <div *ngFor="let message of messages; let i = index"> -->
+                <p *ngFor="let message of messages; let i = index">
+                    {{message}}<br *ngIf="i !== (messages.length-1)">
+                </p>
+                
+            <!-- </div> -->
+        </div>
+    </nb-card-body>
+    <nb-card-footer *ngIf="showFooter && !showFakeFooter">
+        <button nbButton shape="round"
+            style="float: right; margin-right: 10px; background-color: #8e003a; color: white; border-color: #8e003a;"
+            (click)="close(true)">Sì</button>
+        <button nbButton shape="round"
+            style="margin-right: 10px; text-align: left; background-color: #0e2c77; color: white; border-color: #0e2c77;"
+            (click)="close(false)">No</button>
+    </nb-card-footer>
+    <nb-card-footer *ngIf="showFakeFooter && !showFooter">
+        <button nbButton shape="round"
+            style="float: right; margin-right: 10px; background-color: #8e003a; color: white; border-color: #8e003a;"
+            (click)="close(false)">Ok</button>
+    </nb-card-footer>
+</nb-card>

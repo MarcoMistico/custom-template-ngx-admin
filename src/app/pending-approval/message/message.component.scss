@@ -1,0 +1,12 @@
+.container {
+    height: calc(100vh - 76px);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.message {
+    margin-bottom: 76px;
+}
