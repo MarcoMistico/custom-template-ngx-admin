@@ -4,12 +4,14 @@ import { RouterModule } from '@angular/router';
 import { ThemeModule } from '../../@theme/theme.module';
 import { ViewDashboardComponent } from './view-dashboard/view-dashboard.component';
 import { OperatorComponentsModule } from '../components/operator-components.module';
+import { ViewHelloWorldComponent } from './view-hello-world/view-hello-world.component';
 
 
 
 @NgModule({
   declarations: [
-    ViewDashboardComponent
+    ViewDashboardComponent,
+    ViewHelloWorldComponent
   ],
   imports: [
     CommonModule,
